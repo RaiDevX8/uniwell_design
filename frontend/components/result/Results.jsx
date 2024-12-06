@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import "./Result.css"
 const Result = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const Result = () => {
 
   return (
     <div className="feedback-summary">
-      <h1>Thank You for Your Feedback!</h1>
+      <h1>DashBoard</h1>
       <p>
         <strong>Visit Frequency:</strong> {feedback.visitFrequency}
       </p>

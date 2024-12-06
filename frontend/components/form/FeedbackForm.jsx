@@ -15,7 +15,10 @@ const FeedbackForm = () => {
   });
 
   const handleRating = (category, value) => {
-    setFormData((prev) => ({ ...prev, [category]: value }));
+    setFormData((prev) => (
+      
+      { ...prev, [category]: value }
+    ));
   };
 
   const handleChange = (e) => {
@@ -36,6 +39,7 @@ const FeedbackForm = () => {
           value={formData.visitFrequency}
           onChange={handleChange}
           className="selection"
+          required
         >
           <option value="regularly">Regularly</option>
           <option value="occasionally">Occasionally</option>
@@ -73,6 +77,7 @@ const FeedbackForm = () => {
               type="radio"
               name="recommend"
               value="yes"
+              required
               onChange={handleChange}
               checked={formData.recommend === "yes"}
             />
@@ -83,6 +88,7 @@ const FeedbackForm = () => {
               type="radio"
               name="recommend"
               value="no"
+              required
               onChange={handleChange}
               checked={formData.recommend === "no"}
             />
@@ -97,6 +103,7 @@ const FeedbackForm = () => {
           name="suggestions"
           value={formData.suggestions}
           onChange={handleChange}
+          required
         />
       </div>
 

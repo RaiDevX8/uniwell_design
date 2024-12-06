@@ -95,4 +95,10 @@ label{
 select{
   width: 361px;
 }
+.button{
+  width: 361px;
+  height: 56px;
+  color: white;
+  font-size: 20px;
+}
 }
