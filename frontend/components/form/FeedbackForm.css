@@ -78,8 +78,9 @@ label{
 
 .selection{
   overflow: hidden;
-  width: 70vw;
   height: 45px;
+    width: 361px;
+
   border-radius: 0 0 8px 8px;
   gap: 10px;
   border: 1px solid black;
