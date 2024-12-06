@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./FeedbackForm.css";
 import { AiFillStar } from "react-icons/ai";
@@ -14,11 +14,22 @@ const FeedbackForm = () => {
     suggestions: "",
   });
 
+  useEffect(() => {
+    const savedFormData = localStorage.getItem("feedbackFormData");
+    if (savedFormData) {
+      setFormData(JSON.parse(savedFormData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("feedbackFormData", JSON.stringify(formData));
+  }, [formData]);
+
   const handleRating = (category, value) => {
-    setFormData((prev) => (
-      
-      { ...prev, [category]: value }
-    ));
+    setFormData((prev) => ({
+      ...prev,
+      [category]: value,
+    }));
   };
 
   const handleChange = (e) => {
@@ -27,6 +38,7 @@ const FeedbackForm = () => {
   };
 
   const handleSubmit = () => {
+    localStorage.removeItem("feedbackFormData");
     navigate("/summary", { state: formData });
   };
 
