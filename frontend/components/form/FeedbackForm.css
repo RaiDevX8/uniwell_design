@@ -1,0 +1,97 @@
+.feedback-form {
+      font-family: Arial, sans-serif;
+      width: 393px;
+      height: 961px;
+     margin: auto;
+     padding: 20px;
+         border-radius: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: start;
+         flex-direction: column;
+}
+
+
+.rating-section,
+.recommend-section,
+.button-section
+.suggestions-section {
+  margin-bottom: 20px;
+  height: 95px;
+}
+
+label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+textarea {
+  width: 100%;
+  height: 234px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 40px ;
+}
+
+.star.active {
+  color: #ffc107;
+  font-size: 40px ;
+}
+
+.recommend-options {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  resize: none;
+}
+.case{
+  text-transform: uppercase;
+  text-align: center;
+}
+label{
+  text-transform: uppercase;
+}
+
+.selection{
+  overflow: hidden;
+  width: 70vw;
+  height: 45px;
+  border-radius: 0 0 8px 8px;
+  gap: 10px;
+  border: 1px solid black;
+}
+.button{
+  width: 148px;
+  height: 24px;
+  background-color: #D83D4C;
+  font-size: 10px;
+}
+@media only screen and (max-width: 600px) {
+select{
+  width: 361px;
+}
+}
